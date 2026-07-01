@@ -1,7 +1,6 @@
 const axios = require('axios');
 const schedule = require('node-schedule');
 const fs = require('fs');
-const FormData = require('form-data');
 const path = require('path');
 
 // =============================================================
@@ -815,7 +814,7 @@ async function exportToExcel(bot, msg) {
         return bot.sendMessage(chatId, "📊 Chưa có dữ liệu để xuất. Hãy lưu biển số trước!");
     }
 
-    // Zalo không có sendChatAction, nên ta gửi tin nhắn thông báo ngay
+    // Gửi tin nhắn thông báo trong lúc xử lý
     await bot.sendMessage(chatId, "⏳ Đang tạo báo cáo CSV, vui lòng chờ trong giây lát...");
 
     try {
@@ -874,31 +873,18 @@ async function exportToExcel(bot, msg) {
         const filePath = path.join(tempDir, fileName);
         fs.writeFileSync(filePath, csv, 'utf8');
 
-        // *** THAY ĐỔI CHÍNH: Tải file lên dịch vụ và gửi link ***
-        const form = new FormData();
-        form.append('file', fs.createReadStream(filePath));
-
-        const uploadResponse = await axios.post('https://tmp.link/api/upload', form, {
-            headers: {
-                ...form.getHeaders()
-            }
+        // *** GỬI FILE TRỰC TIẾP QUA TELEGRAM ***
+        await bot.sendDocument(chatId, filePath, {
+            caption:
+                `📊 Báo cáo phạt nguội của bạn đã sẵn sàng!\n` +
+                `📅 Ngày xuất: ${new Date().toLocaleString('vi-VN')}\n` +
+                `📝 Tổng ${excelData.length} vi phạm`
+        }, {
+            filename: fileName,
+            contentType: 'text/csv'
         });
 
-        const downloadLink = uploadResponse.data.url;
-
-        if (downloadLink) {
-             await bot.sendMessage(chatId,
-                `📊 Báo cáo của bạn đã sẵn sàng!\n\n` +
-                `📅 Ngày xuất: ${new Date().toLocaleString('vi-VN')}\n` +
-                `📝 Tổng ${excelData.length} vi phạm\n\n` +
-                `🔗 Vui lòng nhấn vào link sau để tải về:\n${downloadLink}\n\n` +
-                `(Link sẽ tự hủy sau 24 giờ)`
-            );
-        } else {
-             await bot.sendMessage(chatId, "⚠️ Đã tạo báo cáo nhưng không thể lấy link tải về. Vui lòng thử lại.");
-        }
-
-        // Xóa file tạm sau khi đã tải lên
+        // Xóa file tạm sau khi đã gửi
         fs.unlinkSync(filePath);
 
     } catch (error) {
