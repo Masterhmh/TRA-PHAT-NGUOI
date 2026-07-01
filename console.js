@@ -3,21 +3,24 @@ const chalk = require('chalk');
 
 /**
  * Ghi log một tin nhắn đến một cách gọn gàng và đẹp mắt.
- * @param {object} msg - Đối tượng tin nhắn từ ZaloBot.
+ * @param {object} msg - Đối tượng tin nhắn từ Telegram.
  */
 function logMessage(msg) {
   // Lấy thời gian hiện tại
   const timestamp = new Date().toLocaleTimeString('vi-VN');
 
   // Lấy thông tin người gửi và cuộc trò chuyện
-  const senderName = msg.from.display_name;
+  // Telegram không có display_name -> ghép first_name + last_name (hoặc username)
+  const senderName = [msg.from.first_name, msg.from.last_name]
+    .filter(Boolean)
+    .join(' ') || msg.from.username || 'Người dùng';
   const senderId = msg.from.id;
-  const chatType = msg.chat.chat_type;
+  const chatType = msg.chat.type;
   const messageText = msg.text;
 
   // Định dạng thông tin chat type với màu sắc và icon
-  const chatInfo = chatType === 'PRIVATE' 
-    ? chalk.blue('👤 Riêng tư') 
+  const chatInfo = chatType === 'private'
+    ? chalk.blue('👤 Riêng tư')
     : chalk.green('👥 Nhóm');
 
   // Xây dựng chuỗi log hoàn chỉnh với màu sắc
