@@ -77,11 +77,11 @@ function isValidPlate(plate) {
 // =============================================================
 // Nguon chinh: api.checkphatnguoi.vn (tra ve JSON chuan)
 async function fetchFromCheckPhatNguoi(bienSo) {
-	const MAX_TRY = 2;
+	const MAX_TRY = 1;
 	let lastErr;
 	for (let attempt = 1; attempt <= MAX_TRY; attempt++) {
 		const controller = new AbortController();
-		const timer = setTimeout(() => controller.abort(), 10000);
+		const timer = setTimeout(() => controller.abort(), 20000);
 		try {
 			const res = await fetch(API_URL, {
 				method: "POST",
