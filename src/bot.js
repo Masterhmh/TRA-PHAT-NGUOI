@@ -222,10 +222,17 @@ async function checkSingle(ctx, env, userId, bienSoRaw) {
 	}
 
 	await ctx.replyWithChatAction("typing").catch(() => {});
+	const statusMsg = await ctx.reply(`🔍 Đang tra cứu biển số ${bienSo}, vui lòng chờ trong giây lát...`).catch(() => null);
+	const clearStatus = async () => {
+		if (statusMsg) {
+			await ctx.api.deleteMessage(ctx.chat.id, statusMsg.message_id).catch(() => {});
+		}
+	};
 
 	try {
 		const { status, data, data_info } = await fetchPhatNguoi(bienSo);
 		await logSearch(env, userId, bienSo);
+		await clearStatus();
 
 		if (status !== 1 || !Array.isArray(data) || data.length === 0) {
 			return reply(
@@ -259,6 +266,7 @@ async function checkSingle(ctx, env, userId, bienSoRaw) {
 			await reply(ctx, `💾 Lưu biển số này để theo dõi?\nGửi: /phatnguoi luu ${bienSo} [tên xe]`);
 		}
 	} catch (error) {
+		await clearStatus();
 		console.error("[API_ERROR]", error);
 		await reply(ctx, `⚠️ Đã xảy ra lỗi khi tra cứu:\n• ${error.message}\n\n🔄 Vui lòng thử lại sau.`);
 	}
