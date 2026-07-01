@@ -1,14 +1,15 @@
 // main.js
 
-const ZaloBot = require("node-zalo-bot");
+const TelegramBot = require("node-telegram-bot-api");
 const fs = require('fs');
 const path = require('path');
 const logger = require('./console.js');
 const chalk = require('chalk');
 
 // --- CẤU HÌNH BOT ---
+// Lấy token từ @BotFather trên Telegram và dán vào đây
 const token = "thay token vao day";
-const bot = new ZaloBot(token, {
+const bot = new TelegramBot(token, {
   polling: true
 });
 const prefix = "/";
@@ -74,7 +75,7 @@ bot.on('polling_error', (error) => {
     console.error(chalk.red('[POLLING_ERROR]'), error);
 });
 
-console.log(chalk.bold.magenta("\nZaloBot đã sẵn sàng và đang chạy..."));
+console.log(chalk.bold.magenta("\nTelegramBot đã sẵn sàng và đang chạy..."));
 // --- BẮT LỖI TOÀN CỤC ĐỂ KHÔNG DỪNG BOT ---
 
 process.on('uncaughtException', (err) => {
