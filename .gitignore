@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Bien moi truong / bi mat (KHONG commit token bot)
+.env
+.env.local
+
+# Du lieu / file cu (phien ban polling truoc day)
+commands/phatnguoi_data.json
+commands/temp/
+*.csv
+
+# Logs
+*.log
+npm-debug.log*
+
+# He dieu hanh
+.DS_Store
+Thumbs.db
