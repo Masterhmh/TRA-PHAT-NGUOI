@@ -67,31 +67,45 @@ function sleep(ms) {
 }
 
 function isValidPlate(plate) {
-	const clean = plate.replace(/-/g, "").replace(/\./g, "");
-	const patterns = [
-		/^\d{2}[A-Z]\d{4,5}$/,
-		/^\d{2}[A-Z]{2}\d{4,5}$/,
-		/^\d{2}LD\d{4,5}$/,
-		/^\d{2}KT\d{4,5}$/,
-	];
-	return patterns.some((p) => p.test(clean));
+	const clean = plate.replace(/[-.\s]/g, "").toUpperCase();
+	return /^\d{2}[A-Z]{1,2}\d{4,6}$/.test(clean);
 }
 
 async function fetchPhatNguoi(bienSo) {
-	const controller = new AbortController();
-	const timer = setTimeout(() => controller.abort(), 15000);
-	try {
-		const res = await fetch(API_URL, {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({ bienso: bienSo }),
-			signal: controller.signal,
-		});
-		if (!res.ok) throw new Error(`API tra ve HTTP ${res.status}`);
-		return await res.json();
-	} finally {
-		clearTimeout(timer);
+	const MAX_TRY = 2;
+	let lastErr;
+	for (let attempt = 1; attempt <= MAX_TRY; attempt++) {
+		const controller = new AbortController();
+		const timer = setTimeout(() => controller.abort(), 10000);
+		try {
+			const res = await fetch(API_URL, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"Accept": "application/json, text/plain, */*",
+					"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+					"Origin": "https://checkphatnguoi.vn",
+					"Referer": "https://checkphatnguoi.vn/",
+				},
+				body: JSON.stringify({ bienso: bienSo }),
+				signal: controller.signal,
+			});
+			if (res.ok) {
+				return await res.json();
+			}
+			lastErr = new Error(`API tra ve HTTP ${res.status}`);
+			if (res.status < 500 && res.status !== 429) break;
+		} catch (e) {
+			lastErr = e;
+		} finally {
+			clearTimeout(timer);
+		}
+		if (attempt < MAX_TRY) {
+			await sleep(1200);
+		}
 	}
+	console.error("[API_ERROR]", lastErr);
+	throw new Error("Hệ thống tra cứu đang bận, vui lòng thử lại sau ít phút nhé!");
 }
 
 // Gui tin nhan, tu dong cat neu qua 4096 ky tu
