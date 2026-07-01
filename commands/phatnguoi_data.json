@@ -1,0 +1,330 @@
+{
+  "users": {
+    "6f4eb53be16d0833517c": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T02:23:55.641Z",
+      "registeredPlates": [],
+      "autoNotify": true,
+      "notifyTime": "06:00"
+    },
+    "a7ac7dd9298fc0d1999e": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:10:45.380Z",
+      "autoNotify": true,
+      "notifyTime": "06:00"
+    },
+    "509fac1dcf5726097f46": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:51:50.212Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "98611f0c434eaa10f35f": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:51:50.829Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "02329257931d7a43230c": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:52:14.410Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "6cb114970dd8e486bdc9": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:52:14.995Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "d13fc7630023e97db032": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:52:30.534Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "2ed86862d92a3074693b": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:52:43.726Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "f335244e86066f583617": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:52:50.053Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "3252b6e12aabc3f59aba": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:52:54.983Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "0f1e2b8e3dc2d49c8dd3": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:53:10.293Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "649311254d6da433fd7c": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:53:16.825Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "b59326418803615d3812": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:53:22.294Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "9edb8963ee3707695e26": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:53:25.453Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "46d50d9175d29c8cc5c3": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:53:28.612Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "6bba72259f73762d2f62": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:53:32.195Z",
+      "autoNotify": true,
+      "notifyTime": "06:00"
+    },
+    "ef71ad6c65248c7ad535": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:53:53.222Z",
+      "autoNotify": true,
+      "notifyTime": "06:00"
+    },
+    "6f34e8833fdfd6818fce": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:06.360Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "acca5217f142181c4153": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:14.309Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "c8d259d20798eec6b789": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:18.935Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "1f34cb331366fa38a377": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:32.396Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "bc12d7814cc3a59dfcd2": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:35.299Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "f9215da5a4f24dac14e3": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:39.325Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "3323efd2928e7bd0229f": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:45.212Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "f9f55a1df94910174958": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:46.304Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "4eb308b599fc70a229ed": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:46.990Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "1d2025486d1f8441dd0e": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T04:54:50.417Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    },
+    "a65de566522ebb70e23f": {
+      "accepted": true,
+      "acceptedDate": "2025-10-13T05:33:48.830Z",
+      "autoNotify": false,
+      "notifyTime": "06:00"
+    }
+  },
+  "savedPlates": {
+    "6f4eb53be16d0833517c": [
+      {
+        "bienso": "18C12406",
+        "nickname": "Xe của tôi",
+        "addedDate": "2025-10-13T02:23:58.189Z"
+      }
+    ],
+    "a7ac7dd9298fc0d1999e": [
+      {
+        "bienso": "72H77785",
+        "nickname": "xe dream",
+        "addedDate": "2025-10-13T04:17:19.298Z"
+      }
+    ],
+    "3252b6e12aabc3f59aba": [
+      {
+        "bienso": "70AA44721",
+        "nickname": "WinnerX",
+        "addedDate": "2025-10-13T04:53:43.704Z"
+      }
+    ],
+    "6bba72259f73762d2f62": [
+      {
+        "bienso": "18EA02371",
+        "nickname": "Phạm Quang Huy",
+        "addedDate": "2025-10-13T04:54:14.736Z"
+      }
+    ],
+    "ef71ad6c65248c7ad535": [
+      {
+        "bienso": "75AC06369",
+        "nickname": "AB",
+        "addedDate": "2025-10-13T04:54:30.224Z"
+      }
+    ],
+    "c8d259d20798eec6b789": [
+      {
+        "bienso": "43A75032",
+        "nickname": "Xe của tôi",
+        "addedDate": "2025-10-13T04:54:42.930Z"
+      }
+    ]
+  },
+  "searchHistory": {
+    "a7ac7dd9298fc0d1999e": [
+      {
+        "bienso": "72H77785",
+        "timestamp": "2025-10-13T04:17:00.039Z"
+      },
+      {
+        "bienso": "18C12406",
+        "timestamp": "2025-10-13T04:38:45.847Z"
+      },
+      {
+        "bienso": "18C12406",
+        "timestamp": "2025-10-13T05:07:31.286Z"
+      },
+      {
+        "bienso": "18C12406",
+        "timestamp": "2025-10-13T05:10:56.661Z"
+      }
+    ],
+    "6cb114970dd8e486bdc9": [
+      {
+        "bienso": "47AD11267",
+        "timestamp": "2025-10-13T04:52:39.043Z"
+      }
+    ],
+    "d13fc7630023e97db032": [
+      {
+        "bienso": "30F17193",
+        "timestamp": "2025-10-13T04:52:43.599Z"
+      }
+    ],
+    "3252b6e12aabc3f59aba": [
+      {
+        "bienso": "70AA44721",
+        "timestamp": "2025-10-13T04:53:12.400Z"
+      },
+      {
+        "bienso": "70AA44721",
+        "timestamp": "2025-10-13T05:11:14.694Z"
+      }
+    ],
+    "6bba72259f73762d2f62": [
+      {
+        "bienso": "18EA02371",
+        "timestamp": "2025-10-13T04:53:51.301Z"
+      }
+    ],
+    "6f34e8833fdfd6818fce": [
+      {
+        "bienso": "60A54966",
+        "timestamp": "2025-10-13T04:54:11.023Z"
+      }
+    ],
+    "ef71ad6c65248c7ad535": [
+      {
+        "bienso": "75AC06369",
+        "timestamp": "2025-10-13T04:54:12.030Z"
+      }
+    ],
+    "acca5217f142181c4153": [
+      {
+        "bienso": "29AX05927",
+        "timestamp": "2025-10-13T04:54:27.477Z"
+      }
+    ],
+    "c8d259d20798eec6b789": [
+      {
+        "bienso": "43A75032",
+        "timestamp": "2025-10-13T04:54:29.884Z"
+      }
+    ],
+    "46d50d9175d29c8cc5c3": [
+      {
+        "bienso": "59-K2",
+        "timestamp": "2025-10-13T05:31:12.836Z"
+      },
+      {
+        "bienso": "71066",
+        "timestamp": "2025-10-13T05:31:12.836Z"
+      },
+      {
+        "bienso": "59K2",
+        "timestamp": "2025-10-13T05:31:22.717Z"
+      },
+      {
+        "bienso": "71066",
+        "timestamp": "2025-10-13T05:31:22.717Z"
+      }
+    ],
+    "a65de566522ebb70e23f": [
+      {
+        "bienso": "49B1-39232",
+        "timestamp": "2025-10-13T05:35:02.276Z"
+      },
+      {
+        "bienso": "XE",
+        "timestamp": "2025-10-13T05:35:02.276Z"
+      },
+      {
+        "bienso": "MAY",
+        "timestamp": "2025-10-13T05:35:02.276Z"
+      },
+      {
+        "bienso": "49B139232",
+        "timestamp": "2025-10-13T05:35:31.534Z"
+      },
+      {
+        "bienso": "XEMAY",
+        "timestamp": "2025-10-13T05:35:31.534Z"
+      }
+    ]
+  },
+  "lastSaved": "2025-10-13T06:41:05.562Z"
+}
