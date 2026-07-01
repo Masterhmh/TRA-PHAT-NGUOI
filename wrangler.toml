@@ -1,0 +1,16 @@
+name = "tra-phat-nguoi-bot"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# KV luu du lieu nguoi dung (thay cho file phatnguoi_data.json)
+# Tao namespace bang: npx wrangler kv namespace create DB
+# Sau do dan "id" nhan duoc vao ben duoi.
+[[kv_namespaces]]
+binding = "DB"
+id = "THAY_BANG_KV_NAMESPACE_ID"
+
+# Cron chay MOI PHUT (gio UTC), code se so voi gio VN de gui dung notifyTime
+# (mac dinh 09:00 gio Viet Nam). Xem src/bot.js -> runDailyNotifications.
+[triggers]
+crons = ["* * * * *"]
